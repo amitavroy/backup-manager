@@ -1,6 +1,6 @@
 {
     "name": "amitavroy/backup-manager",
-    "description": "A backup utility for my projects",
+    "description": "This Laravel package allows you to create a backup of your database. You can use any file system which Laravel supports like S3, FTP, local etc.",
     "authors": [
         {
             "name": "Amitav Roy",

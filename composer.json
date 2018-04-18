@@ -1,0 +1,13 @@
+{
+    "name": "amitavroy/backup",
+    "description": "A backup utility for my projects",
+    "authors": [
+        {
+            "name": "Amitav Roy",
+            "email": "reachme@amitavroy.com"
+        }
+    ],
+    "require": {
+        "spatie/db-dumper": "^2.9"
+    }
+}

@@ -10,12 +10,12 @@ composer require amitavroy/backup-manager
 
 Add the service provider inside app.php
 ```
-\Backup\BackupServiceProvider::class,
+Amitav\Backup\BackupServiceProvider::class,
 ```
 
 After adding the service provider, publish the config file using
 ```
-php artisan vendor:publish --provider="Backup\BackupServiceProvider"
+php artisan vendor:publish --provider="Amitav\Backup\BackupServiceProvider"
 ```
 
 ## Configuration

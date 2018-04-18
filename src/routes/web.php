@@ -1,6 +1,6 @@
 <?php
 
-$namespace = 'Backup\Http\Controllers';
+$namespace = 'Amitav\Backup\Http\Controllers';
 
 Route::group([
     'namespace' => $namespace

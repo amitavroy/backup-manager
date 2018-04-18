@@ -1,8 +1,8 @@
 <?php
 
-namespace Backup\Command;
+namespace Amitav\Backup\Command;
 
-use Backup\Services\DatabaseDump;
+use Amitav\Backup\Services\DatabaseDump;
 use Illuminate\Console\Command;
 
 class BackupDatabase extends Command

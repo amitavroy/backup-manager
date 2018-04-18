@@ -7,6 +7,11 @@
             "email": "reachme@amitavroy.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Amitav\\Backup\\": "src"
+        }
+    },
     "require": {
         "spatie/db-dumper": "^2.9"
     }

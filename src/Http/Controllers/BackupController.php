@@ -1,6 +1,6 @@
 <?php 
 
-namespace Backup\Http\Controllers;
+namespace Amitav\Backup\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 

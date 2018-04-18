@@ -1,6 +1,6 @@
 <?php
 
-namespace Backup\Services;
+namespace Amitav\Backup\Services;
 
 use Carbon\Carbon;
 use Illuminate\Http\File;

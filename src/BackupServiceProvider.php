@@ -1,8 +1,8 @@
 <?php
 
-namespace Backup;
+namespace Amitav\Backup;
 
-use Backup\Command\BackupDatabase;
+use Amitav\Backup\Command\BackupDatabase;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 

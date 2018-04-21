@@ -1,4 +1,4 @@
-# Backup
+# Backup-Manager
 
 This Laravel package allows you to create a backup of your database. You can use any file system which Laravel supports like S3, FTP, local etc.
 

@@ -14,5 +14,12 @@
     },
     "require": {
         "spatie/db-dumper": "^2.9"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amitav\\Backup\\BackupServiceProvider"
+            ]
+        }
     }
 }

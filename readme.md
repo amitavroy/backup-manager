@@ -3,6 +3,11 @@
 This Laravel package allows you to create a backup of your database. You can use any file system which Laravel supports like S3, FTP, local etc.
 
 ## Installation
+
+## Auto discovery
+If you are using Laravel 5.6, then this package supports auto-discovery and so you don't need to do anything and can directly skip to the configuration part.
+
+## Normal installation
 To install the package, run the following command
 ```
 composer require amitavroy/backup-manager
@@ -45,5 +50,5 @@ protected $commands = [
     BackupDatbase::class,
 ];
 
-$schedule->command('backup:datatabase')->daily();
+$schedule->command('backup:database')->daily();
 ```

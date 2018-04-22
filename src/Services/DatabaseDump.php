@@ -2,6 +2,7 @@
 
 namespace Amitav\Backup\Services;
 
+use Amitav\Backup\Models\Backup;
 use Carbon\Carbon;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
@@ -13,6 +14,7 @@ class DatabaseDump
     private $filename;
     private $fileSize;
     private $folderName;
+    private $duration;
 
     public function __construct()
     {
@@ -24,10 +26,15 @@ class DatabaseDump
 
     public function handle()
     {
+        $start = microtime(TRUE);
         $this->takeDump();
         $this->compressBackup();
         $this->uploadFile();
         $this->removeBackupFile();
+        $end = microtime(TRUE);
+
+        $this->duration = $this->getDuration($start, $end);
+        $this->makeEntry();
     }
 
     protected function takeDump()
@@ -70,7 +77,7 @@ class DatabaseDump
         }
     }
 
-    private function getFileSize(File $file)
+    protected function getFileSize(File $file)
     {
         $fileSize = $file->getSize();
         $unit = 'Bytes';
@@ -83,5 +90,20 @@ class DatabaseDump
             $unit = 'MB';
         }
         return round($fileSize) . ' ' . $unit;
+    }
+
+    protected function getDuration($start, $end)
+    {
+        return date("H:i:s",$end - $start);
+    }
+
+    protected function makeEntry()
+    {
+        Backup::create([
+            'uri' => $this->folderName . $this->filename . '.tar.gz',
+            'file_system' => config('backup.database_storage_driver'),
+            'time_taken' => $this->duration,
+            'file_size' => $this->fileSize,
+        ]);
     }
 }

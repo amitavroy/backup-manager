@@ -39,7 +39,7 @@ class DiskChecker
     protected function checkIfS3SupportIsPresent()
     {
         foreach ($this->packages as $key => $package) {
-            if ($package['name'] == 'league/flysystem-aws-s3-v35') {
+            if ($package['name'] == 'league/flysystem-aws-s3-v3') {
                 return true;
             }
         }

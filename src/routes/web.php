@@ -3,7 +3,8 @@
 $namespace = 'Amitav\Backup\Http\Controllers';
 
 Route::group([
-    'namespace' => $namespace
+    'namespace' => $namespace,
+    'prefix' => 'backups',
 ], function () {
     Route::get('test', 'BackupController@index')->name('backup-list');
 });

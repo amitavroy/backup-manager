@@ -12,6 +12,11 @@
             "Amitav\\Backup\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Amitav\\Backup\\Tests\\": "tests"
+        }
+    },
     "require": {
         "spatie/db-dumper": "^2.9"
     },
@@ -21,5 +26,9 @@
                 "Amitav\\Backup\\BackupServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.6",
+        "phpunit/phpunit": "^7.1"
     }
 }
